@@ -1,0 +1,113 @@
+<ul class="nav navbar-nav side-nav">
+    <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#news"><i class="fa fa-fw fa-newspaper-o"></i> Novinky <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="news" class="collapse">
+            <li class="<?php if($currentTemplate==='novinka'){echo 'active';}?>">
+                <a href="novinka"><i class="fa fa-fw fa-newspaper-o"></i> Přidat Novinku</a>
+            </li>
+            <li>
+                <a href="novinky-edit-list"><i class="fa fa-fw fa-newspaper-o"></i> Novinky edit</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#recenz"><i class="fa fa-fw fa-dashboard"></i> Recenze <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="recenz" class="collapse">
+            <li class="<?php if($currentTemplate==='recenze'){echo 'active';}?>">
+                <a href="recenze"><i class="fa fa-fw fa-dashboard"></i> Přidat Recenzi</a>
+            </li>
+            <li>
+                <a href="recenze-edit-list"><i class="fa fa-fw fa-dashboard"></i> Recenze edit</a>
+            </li>
+            <li>
+                <a href="additional-reviews"><i class="fa fa-fw fa-dashboard"></i> Additional reviews</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#rozhv"><i class="fa fa-fw fa-comment"></i> Rozhovory <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="rozhv" class="collapse">
+            <li class="<?php if($currentTemplate==='rozhovor'){echo 'active';}?>">
+                <a href="rozhovor"><i class="fa fa-fw fa-comment"></i> Přidat Rozhovor</a>
+            </li>
+            <li>
+                <a href="rozhovor-edit-list"><i class="fa fa-fw fa-comment"></i> Rozhovor edit</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#rprt"><i class="fa fa-fw fa-table"></i> Reporty <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="rprt" class="collapse">
+            <li class="<?php if($currentTemplate==='report'){echo 'active';}?>">
+                <a href="report"><i class="fa fa-fw fa-table"></i> Přidat Report</a>
+            </li>
+            <li>
+                <a href="report-edit-list"><i class="fa fa-fw fa-table"></i> Report edit</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#evnt"><i class="fa fa-fw fa-building"></i> Akce <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="evnt" class="collapse">
+            <li class="<?php if($currentTemplate==='event'){echo 'active';}?>">
+                <a href="akce"><i class="fa fa-fw fa-building"></i> Přidat Akci</a>
+            </li>
+            <li>
+                <a href="akce-edit-list"><i class="fa fa-fw fa-building"></i> Akce edit</a>
+            </li>
+            <li>
+                <a href="akce-od-lidi"><i class="fa fa-fw fa-building"></i> Akce od lidí</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#alb"><i class="fa fa-fw fa-compact-disc"></i> Alba měsíce <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="alb" class="collapse">
+            <li class="<?php if($currentTemplate==='alba'){echo 'active';}?>">
+                <a href="alba"><i class="fa fa-fw fa-compact-disc"></i> Přidat Album měsíce</a>
+            </li>
+            <li>
+                <a href="alba-edit-list"><i class="fa fa-fw fa-compact-disc"></i> Alba měsíce edit</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="javascript:;" data-toggle="collapse" data-target="#artcl"><i class="fa fa-fw fa-newspaper"></i> Ostatní <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="artcl" class="collapse">
+            <li class="<?php if($currentTemplate==='ostatni'){echo 'active';}?>">
+                <a href="ostatni"><i class="fa fa-fw fa-newspaper"></i> Přidat článek</a>
+            </li>
+            <li>
+                <a href="ostatni-edit-list"><i class="fa fa-fw fa-newspaper"></i> Ostatní edit</a>
+            </li>
+        </ul>
+    </li>
+    <li class="<?php if($currentTemplate==='poutac1' || $currentTemplate==='poutac2' || $currentTemplate==='poutac3' || $currentTemplate==='poutac4'){echo 'active';}?>">
+        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-cubes"></i> Poutač <i class="fa fa-fw fa-caret-down"></i></a>
+        <ul id="demo" class="collapse">
+            <li class="<?php if($currentTemplate==='poutac1'){echo 'active';}?>">
+                <a href="poutac1"><i class="fa fa-fw fa-cubes"></i> Poutač Hlavní</a>
+            </li>
+            <li class="<?php if($currentTemplate==='poutac2'){echo 'active';}?>">
+                <a href="poutac2"><i class="fa fa-fw fa-cubes"></i> Poutač napravo nahoře</a>
+            </li>
+            <li class="<?php if($currentTemplate==='poutac3'){echo 'active';}?>">
+                <a href="poutac3"><i class="fa fa-fw fa-cubes"></i> Poutač napravo dole</a>
+            </li>            
+        </ul>
+    </li>
+    <li>
+        <a href="kostka" class="<?php if($currentTemplate==='poutac4'){echo 'active';}?>"><i class="fa fa-cube"></i> Kostka pod bannerem</a>
+    </li>
+    <li>
+        <a href="galerie"><i class="fa fa-fw fa-file-image-o"></i> Galerie</a>
+    </li>    
+    <?php if ($_SESSION['role'] === 1) { ?>
+    <li>
+        <a href="schvaleni"><i class="fa fa-thumbs-up"></i> Schválení příspěvků</a>
+    </li>
+    <li>
+        <a href="wishlist"><i class="fa fa-fw fa-angellist"></i> Wishlist</a>
+    </li>
+    <?php } ?>
+</ul>

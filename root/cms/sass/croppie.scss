@@ -1,0 +1,119 @@
+.c-croppie {
+    &__button {
+        background: #000;
+        color: #fff;
+        font-weight: 700;
+        display: inline-block !important;
+
+        &--main {
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }        
+
+        &:hover {
+            color: #fff;
+            background-color: #00f;
+        }
+
+        &--v2 {
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 1px solid;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__input {
+        display: none !important;
+    }
+
+    &__preview {
+        background: gray;        
+        display: none;
+        margin-bottom: 50px;
+
+        &--main {
+            height: 220px;
+            width: 160px;
+        }
+
+        &--main-news {
+            height: 105px;
+            width: 160px;
+        }
+
+        &--search {
+            height: 111px;
+            width: 210px;
+        }
+
+        &--user {
+            height: 142px;
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        &--banner {
+            height: 142px;
+            width: 187px;
+            margin-bottom: 55px;
+        }     
+        
+        &--banner-small {
+            height: 97px;
+            width: 187px;
+            margin-bottom: 55px;
+        }     
+
+        &--detail {
+            height: 167px;
+            width: 456px;
+        }
+
+        &--visible {
+            display: block;
+        }
+
+        img {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    &__modal {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #000c;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+
+        &-button {
+            margin: 0 auto;
+        }
+
+        &-container {
+            width: 80%;
+            padding-top: 100px;
+            margin: 0 auto;
+            margin-top: 0px;
+            background: #fff;
+            margin-top: 80px;
+            border: 5px solid #000;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        &--visible {
+            display: block;
+        }
+    }
+}
+
+.cr-image {
+    font-size: 0;
+}

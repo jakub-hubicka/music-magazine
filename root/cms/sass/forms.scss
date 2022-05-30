@@ -1,0 +1,30 @@
+.form-group label {
+    display: block;
+}
+
+.input-small {
+    width: 200px;
+}
+
+.input-datetime {
+    font-weight: 700;
+    max-width: 200px;
+    cursor: pointer;
+}
+
+.input-intro,
+.input-title {
+    font-weight: 700;
+}
+
+.input-hidden {
+    display: none;
+}
+
+.input-mini {
+    width: 50px;
+}
+
+#multiDayEvent:checked + div {
+    display: block;
+}

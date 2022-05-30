@@ -1,0 +1,15 @@
+.c-detail-info {
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: translateX(150%);
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1.3;
+	text-align: right;
+
+	&--large {
+		font-weight: 900;
+		font-size: 5rem;
+	}
+}

@@ -1,0 +1,22 @@
+.c-filter {
+	display: flex;
+	justify-content: center;
+	padding-top: 16px;
+	padding-bottom: 32px;
+	font-size: 1.4rem;
+
+	&__label {
+		opacity: .3;
+	}
+
+	&__link {
+		font-weight: 600;
+		padding: 0 6px 6px;
+		margin: 0 10px;
+		border-bottom: 1px solid $color-main;
+	}
+
+	@include media('mobile') {
+		display: none;
+	}
+}

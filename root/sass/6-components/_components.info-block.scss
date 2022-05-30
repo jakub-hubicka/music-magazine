@@ -1,0 +1,21 @@
+.c-info-block {
+	display: flex;
+	justify-content: end;
+	flex-direction: column;
+	padding-bottom: 33px;
+	padding-right: 25px;
+
+	&__title {
+		font-weight: 600;
+		color: $color-main;
+	}
+
+	id,
+	email {
+		display: none;
+	}
+}
+
+.darkmode .c-info-block__title {
+	color: $color-darkmode;
+}

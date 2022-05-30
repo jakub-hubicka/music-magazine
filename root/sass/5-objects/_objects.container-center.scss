@@ -1,0 +1,12 @@
+.o-container-center {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1440px;
+	padding: 0 132px;
+	margin: 0 auto;
+
+	@include media('xxl') {
+		padding: 0 20px;
+	}
+}

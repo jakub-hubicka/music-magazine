@@ -1,0 +1,53 @@
+.c-item-v3 {
+	margin-bottom: $large;
+
+	&__container {
+		padding-top: $large;
+		width: 65%;
+	}
+
+	&__img {
+		height: 332px;
+		width: 531px;
+		background-position: center;
+		background-size: 100%;
+		transition: 500ms;
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		margin-bottom: $medium;
+		padding-top: $large;
+	}
+
+	&__author {
+		text-decoration: underline;
+		font-size: 1.2rem;
+		font-weight: 500;
+
+		id,
+		email {
+			display: none;
+		}
+	}
+
+	&__date {
+		font-weight: 600;
+		font-size: 1.2rem;
+		margin-right: $large;
+	}
+
+	
+	@media (hover: hover) {
+		&:hover &__text {
+			color: $color-main;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover .c-item-v3__img {
+			background-size: 105%;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.c-text-fixed {
+	position: fixed;
+	right: 80px;
+	top: 10vh;
+	z-index: 2;
+	
+	@include media('mobile') {
+		display: none;
+	}
+}

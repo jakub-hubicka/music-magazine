@@ -1,0 +1,9 @@
+.o-container-v4 {
+	padding: 24px 24px 0 24px;
+
+	@include media('mobile') {
+		padding: 20px;
+		width: 100%;
+		display: block;
+	}
+}

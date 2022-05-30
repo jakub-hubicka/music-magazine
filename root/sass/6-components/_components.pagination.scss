@@ -1,0 +1,43 @@
+.c-pagination {
+	//display: flex;
+	//justify-content: space-between;
+	text-align: center;
+	padding-top: $large;
+	padding-bottom: 50px;
+
+	&__more-button {
+		font-size: 1.6rem;
+		padding: 8px 16px;
+		border: 1px solid #000;
+		line-height: 1.3;
+		transition: 100ms;
+
+
+		&:hover {
+			background: $color-main;
+			color: #fff;
+		}
+	}
+
+	&__page-button {
+		font-size: 1.6rem;
+		padding: 10px;
+		margin-right: 6px;
+		display: inline-block;
+	}
+
+	&__side {
+		width: 175px;
+	}
+}
+
+.darkmode .c-pagination__more-button {
+	color: #fff;
+	border-color: #fff;
+
+	&:hover {
+		background-color: $color-darkmode;
+		color: #000;
+		border-color: $color-darkmode;
+	}
+}

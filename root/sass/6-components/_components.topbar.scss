@@ -1,0 +1,127 @@
+.c-topbar {
+	background: #000;
+	margin-bottom: 80px;
+	position: relative;
+	z-index: 3;
+
+	@include media('xl-1') {
+		padding: 0;
+		margin: 0;
+		position: fixed;
+		width: 100%;
+		top: 0;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: right;
+		max-width: 1352px;
+	    margin: 0 auto;
+	    padding: 0 20px;
+
+	    @include media('mobile') {
+			padding: 0 20px 0 8px;
+			justify-content: left;
+			justify-content: space-between;
+		}
+	}
+
+	&__toggle {
+		padding: 12px;
+		cursor: pointer;
+
+		&-border {
+			width: 30px;
+			height: $medium;
+			border: 1px solid #fff;
+			border-radius: 7px;
+			padding: 2px;
+		}
+
+		&-dot {
+			width: 10px;
+			height: 10px;
+			background: #fff;
+			border-radius: 5px;
+			position: relative;
+			left: 0;
+			transition: 1s;
+		}
+
+		&--active &-dot {
+			left: 14px;
+			transition: 1s;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+	}
+
+	&__item {
+		display: flex;
+	}
+
+	&__link {
+		color: #fff;
+		font-size: 1rem;
+		padding: 14px;
+		transition: 1s;
+
+		&:hover {
+			background: #fff;
+			color: #000;
+			transition: 0s;
+		}
+
+		@include media('mobile') {
+			display: none;
+		}
+	}
+
+	&__logo-link {
+		color: #fff;
+		font-size: 2rem;
+		padding: 8px;
+		display: none;
+
+		@include media('mobile') {
+			display: inline;
+		}
+	}
+
+	&__search {
+		width: 40px;
+		font-size: 1.8rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		background: url("../images/search.png");
+		cursor: pointer;
+
+		&:hover {
+			background: url("../images/search1.png");
+		}
+	}
+
+	&__night {
+		display: none;
+	}
+
+	&__day,
+	&__night {
+		@include media('mobile') {
+			display: none !important;
+		}
+	}
+}
+
+.darkmode .c-topbar__day {
+	display: none;
+}
+
+.darkmode .c-topbar__night {
+	display: inline;
+}

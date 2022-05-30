@@ -1,0 +1,161 @@
+.c-search {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background: #fff;
+	opacity: 0;
+	visibility: hidden;
+	transition: 1s;
+	padding-top: 32px;	
+
+	&--visible {
+		opacity: 1;
+		visibility: visible;
+		transition: 1s;
+	}
+
+	&__container {
+		opacity: 0;
+		transition: 300ms;
+
+		&--visible {
+			opacity: 1;
+		}
+	}
+
+	&__result-container {
+		height: calc(100vh - 200px);
+		overflow-y: auto;
+		padding-right: 11px;
+		position: relative;
+
+		@include media('mobile') {
+			height: calc(75vh - 200px);
+		}
+	}
+
+	&__close-button {
+		position: absolute;
+		right: 132px;
+		top: 50px;
+		font-weight: 600;
+		font-size: 1.4rem;
+		padding: 10px;
+		cursor: pointer;
+		border-bottom: 2px solid $color-main;
+
+		@include media('mobile') {
+			top: 20px;
+			right: 9px;
+		}
+	}
+
+	&__form {
+		display: flex;
+		align-items: center;
+		margin-bottom: $large;
+
+		@include media('mobile') {
+			margin-top: 30px;
+		}
+	}
+
+	&__input {
+		font-size: 8rem;
+		border: none;
+		//border-left: 1px solid #000;
+		font-weight: 300;
+		padding: 20px 0;
+		width: 70%;
+
+		&::placeholder {
+			opacity: 1;
+		}
+
+		&:focus {
+			//border-left: 0;
+			outline: none;
+		}
+		/*&:focus::placeholder {
+			opacity: 0;
+		}*/
+
+		@include media('mobile') {
+			width: 88%;
+			font-size: 3rem;
+			border-bottom: 1px solid;
+			padding-bottom: 5px;
+		}
+	}
+
+	&__submit {
+		background: url("../images/search-large.png") !important;
+		width: 77px;
+		height: 77px;
+		font-size: 0;
+
+		@include media('mobile') {
+			background-position: center !important;
+			width: 38px;
+			height: 35px;
+			margin-bottom: -25px;
+		}
+	}
+
+	&__load {
+		content: "";
+		width: 100%;
+		height: calc(100vh - 200px);
+		background: #fff;
+		opacity: 0;
+		transition: 1s;
+		visibility: hidden;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		padding-top: 100px;
+
+		&--visible {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&--hidden {
+			display: none;
+		}
+
+
+		@include media('mobile') {
+			height: 30vh;
+			padding-top: 0;
+		}
+	}
+
+	&__pentagram {
+		width: 200px;
+		height: 200px;
+		background: url("../images/pentagram.png");
+		background-size: contain;
+		animation-name: rotation;
+		animation-duration: 1500ms;
+		animation-iteration-count: infinite;
+	}
+
+	@include media('medium') {
+		top: 85px;
+	}
+}
+
+.darkmode .c-search__close-button {
+	color: #000;
+}
+
+@keyframes rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

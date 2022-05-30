@@ -1,0 +1,55 @@
+.c-logo {
+	position: relative;	
+	width: 394px;
+
+	&--mobile {
+		width: 317px;
+		height: 35px;
+		float: left;
+
+		@include media('mobile-2') {
+			width: 250px;
+		}
+	}
+
+	&__link {
+		width: 394px;
+		height: 42px;
+		position: absolute;
+		left: 0;
+		top: 20px;
+		transition: opacity 1s;
+
+		&--mobile {
+			background-size: 100%;
+			background-repeat: no-repeat;
+			width: 317px;
+			height: 35px;
+			top: 0;
+
+			@include media('mobile-2') {
+				top: 4px;
+				width: 250px;
+			}
+		}
+
+		&--day {
+			background-image: url('../images/logo1.png');
+		}
+
+		&--night {
+			background-image: url('../images/logo2.png');
+			opacity: 0;
+		}
+	}
+
+	&:hover {
+		filter: hue-rotate(360deg);
+		transition: 2.5s;
+	}
+}
+
+.c-header--small .c-logo__link {top: 1px;}
+
+.darkmode .c-logo__link--night {opacity: 1}
+.darkmode .c-logo__link--day {opacity: 0}

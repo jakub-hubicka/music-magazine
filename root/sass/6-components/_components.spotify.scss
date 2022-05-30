@@ -1,0 +1,108 @@
+.c-spotify {
+	display: flex;
+
+	&__img {
+		width: 110px;
+		height: 110px;	
+		background: url('../images/biz1.png');
+		background-size: cover !important;
+	}
+
+	&__menu {
+		@include media('mobile') {
+			display: none;
+		}
+	}
+
+	&__text {
+		padding: 0 24px;
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		color: #fff;
+		width: 210px;
+		transition: 300ms;
+		height: 110px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			background: #ffffff15;
+		}
+	}
+
+	&__icon {
+		font-size: 3rem;
+		position: absolute;
+		top: 7px;
+		right: 56px;
+		opacity: 0;
+		transition-delay: 60ms;
+	}
+
+	&__playlist {
+		margin-bottom: 24px;
+		display: flex;
+
+		&--active {
+			font-weight: 900;
+		}
+	}
+
+	&__player {
+		width: 380px;
+		position: relative;
+
+		iframe {
+			position: relative;
+		}
+
+		&--loading::before {
+			content: "";
+			position: absolute;
+			z-index: 0;
+			left: calc(50% - 38px);
+			top: 200px;
+			height: 54px;
+			width: 76px;
+			background: url("../images/load123.png");
+			background-size: 100%;
+			background-repeat: no-repeat;
+			animation: spotifyload 1.5s infinite;
+			animation-timing-function: linear;
+			transform-origin: center;
+
+			@keyframes spotifyload {
+				from {
+					transform: rotate(0);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		}
+
+		@include media('mobile') {
+			margin: 0 auto;
+			padding: 0 20px;
+			width: 100%;
+		}
+	}
+
+	@include media('xxl-2') {
+		display: block;
+		margin: 40px 0;
+	}
+
+	@include media('mobile') {
+		display: block;
+		margin: 40px 0;
+	}
+}
+
+
+
+#playlist1 > .c-spotify__img {background: url('../images/spot1.jpg')}
+#playlist2 > .c-spotify__img {background: url('../images/spot2.jpg')}
+#playlist3 > .c-spotify__img {background: url('../images/spot3.jpg')}
+#playlist4 > .c-spotify__img {background: url('../images/spot4.jpg')}

@@ -1,0 +1,24 @@
+header {
+	position: absolute;
+	top: 40px;
+	height: 80px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	transition: height .5s;
+	z-index: 2;
+	background: #fff;
+	transition: height .5s, background 1s;
+
+	@include media('xxl') {
+		padding-left: 20px;
+	}
+
+	@include media('xl-1') {
+		display: none;
+	}
+}
+
+.darkmode header {
+	background: #151515;
+}

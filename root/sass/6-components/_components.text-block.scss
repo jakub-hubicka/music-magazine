@@ -1,0 +1,80 @@
+.c-text-block {
+	width: 527px;
+	color: #fff;
+
+	@include media('mobile') {
+		width: 100%;
+		text-align: center;
+	}	
+
+	&__title {
+		font-weight: 900;
+		font-size: 8rem;
+		line-height: 7rem;	
+		text-transform: uppercase;
+
+		@include media('mobile-2') {
+			font-size: 6rem;
+			line-height: 5rem;
+		}	
+	}
+
+	&__text {
+		margin: 30px 0;
+		line-height: 2.6rem;
+		padding-right: 100px;
+
+		@include media('mobile') {
+			padding-right: 0;
+		}	
+
+		@include media('mobile-2') {
+			font-size: 1.2rem;
+		}
+	}
+
+	&__button {
+		margin-right: 60px;
+		padding: 8px 16px;
+		border: 1px solid #fff;
+		font-weight: 300;
+		transition: 400ms;
+
+		@include media('mobile') {
+			display: block;
+			text-align: center;		
+			margin-right: 0px;
+			margin-bottom: 20px;
+		}	
+
+		@media (hover: hover) {
+			&:hover {
+				background: #fff;
+				color: #fff;
+				padding: 12px 14px;
+				margin-right: 64px;
+			}
+		}
+
+		@media (hover: hover) {
+			&:hover i {
+				color: black;
+				opacity: 1 !important;
+				transition: 500ms;
+				transition-delay: 150ms;
+			}
+		}
+	}
+
+	&__link {
+		font-weight: 300;
+
+		@include media('mobile') {
+			text-decoration: underline;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

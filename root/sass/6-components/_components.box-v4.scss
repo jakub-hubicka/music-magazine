@@ -1,0 +1,102 @@
+.c-box-v4 {
+	position: relative;
+	width: 533px;
+	height: 278px;
+	margin-bottom: $large;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	padding: 24px;	
+	overflow: hidden;	
+
+	&__title {
+		color: #fff;
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 2.7rem;
+		margin: 16px 0;
+
+		@include media('mobile') {
+			font-size: 2rem;
+			line-height: 1.2;
+			width: 100%;
+		}
+	}
+
+	&__content {
+		transition: 800ms;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		background: linear-gradient(transparent, #000);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		bottom: -50px;
+		left: -50px;
+		box-shadow: 50px -50px 700px 300px $color-main;
+		background: $color-main;
+		opacity: 0;
+		transition: 800ms;
+	}
+
+	@media (hover: hover) {
+		&:hover:after {
+			opacity: .6;
+			transition: 300ms;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover .c-box-v4__content {
+			margin-bottom: 52px;
+			transition: 300ms;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover .c-arrow {
+			opacity: 1;
+		}
+	}
+
+	& > * {
+		position: relative;
+		z-index: 1;
+	}
+	.c-arrow:hover {
+		background: $color-gray;
+		color: #000 !important;
+	}
+	.c-arrow:hover:before {
+		color: #000 !important;
+	}
+
+	@include media('l') {
+		width: 420px;
+	}
+
+	@include media('mobile') {
+		width: 100%;
+		height: 275px;
+		margin-left: 0;
+		margin-bottom: 20px;
+	}	
+}
+
+.darkmode .c-box-v4::after {
+	box-shadow: 50px -50px 700px 300px $color-darkmode-transparent;
+}

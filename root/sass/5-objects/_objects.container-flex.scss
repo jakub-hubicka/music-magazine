@@ -1,0 +1,33 @@
+.o-container-flex {
+	display: flex;
+	justify-content: space-between;
+
+	&--wrap {
+		flex-wrap: wrap;
+	}	
+
+	&--end {
+		align-items: end;
+	}
+
+	&--tablet-reset {
+		@include media('xl-1') {
+			display: block;
+		}
+	}
+
+	&--mobile-reset {
+		@include media('mobile') {
+			display: block;
+		}
+	}
+
+	@include media('mobile') {
+		flex-direction: column;
+		align-items: center;
+
+		& > div {
+			width: 100%;
+		}
+	}
+}

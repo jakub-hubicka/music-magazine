@@ -1,0 +1,35 @@
+.u-mob-hide {	
+	@include media('mobile') {
+		display: none;
+	}
+}
+
+.u-mob-text-center {	
+	@include media('mobile') {
+		text-align: center;
+	}
+}
+
+.u-mob-pb {	
+	@include media('mobile') {
+		padding-bottom: $large;
+	}
+}
+
+.u-mob-mb {	
+	@include media('mobile') {
+		margin-bottom: $large;
+	}
+}
+
+.u-mob-pt-xxl {	
+	@include media('mobile') {
+		padding-top: 120px;
+	}
+}
+
+.u-mob-pt-m {	
+	@include media('mobile') {
+		margin-top: $medium;
+	}
+}

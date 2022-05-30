@@ -1,0 +1,112 @@
+.c-slider-multiple {
+	padding-bottom: 40px;
+	overflow: hidden;	
+
+	&__item {
+		margin-right: $large;
+
+		@include media('xxl-1') {
+			margin-bottom: $large;
+		}
+
+		@include media('m') {
+			width: 49%;
+		}
+
+		@include media('mobile') {
+			width: 100%;
+		}
+	}
+
+	&__controls {
+		display: flex;
+
+		@include media('xxl-1') {
+			display: none;
+		}
+	}
+
+	&__container {
+		margin: 0 0 40px;
+		width: calc(200% + 24px);
+		position: relative;
+		left: 0;
+		transition: 1s;
+		justify-content: left;
+		display: flex;
+
+		&--translated {
+			left: calc(-100% - 24px);
+		}
+
+		@include media('xxl-1') {
+			width: 100%;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__arrow {
+		width: 42px;
+		height: 40px;
+		background: $color-gray;
+		font-size: 0;	
+		font-family: "fontawesome";
+		cursor: pointer;
+		margin-right: $large;
+
+		&--disabled {
+			pointer-events: none;
+		}
+
+		&--left:before {
+			content: "\f060";
+			font-size: 2rem;
+		}
+
+		&--right:before {
+			content: "\f061";
+			font-size: 2rem;
+		}
+
+		&:hover {
+			background: $color-main;
+
+		}
+
+		&:hover:before {
+			color: #fff;
+		}
+	}
+
+	&__bar-container {
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__bar {
+		font-size: 0;
+		height: 1px;
+		background: #A6A6AA;
+		width: 100%;		
+
+		&--active {
+			background: $color-main;
+			height: 5px;
+			width: 50%;
+			margin-top: -2px;
+			position: relative;
+			left: 0%;
+			transition: 1s;
+		}
+
+		&--translated {
+			left: 50%;
+		}
+	}	
+}
+
+.darkmode .c-slider-multiple__bar--active,
+.darkmode .c-slider-multiple__arrow:hover {
+	background: $color-darkmode;
+}

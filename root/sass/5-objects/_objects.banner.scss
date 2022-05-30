@@ -1,0 +1,18 @@
+.o-banner {
+	display: flex;
+	padding-top: 10px;
+
+	&__container {
+		&-left {
+			flex: 6;
+		}
+
+		&-right {
+			flex: 4;
+		}
+	}
+
+	@include media('mobile') {
+		display: none;
+	}
+}

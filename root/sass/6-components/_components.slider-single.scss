@@ -1,0 +1,51 @@
+.c-slider {
+	height: 580px;
+	margin-right: $large;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	background: url("../img/image-big.png");
+	background-position: center;
+	background-size: cover;
+	transition: 2s;
+	color: #fff;
+	margin-bottom: $large;
+	padding: 40px 25px;
+
+	&:nth-child(2):hover {
+		filter: contrast(15);
+		transition: 2s;
+	}
+
+	&__tag {
+		display: inline-flex;
+		background: $color-main;
+		padding: 6px;
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		color: #fff;
+	}
+
+	&__title {
+		padding: 36px 0;
+		text-transform: none;
+		font-size: 4.6rem;
+		line-height: 4.8rem;
+		font-weight: 800;
+	}
+
+	&__text {
+		font-size: 1.2rem;
+	}
+
+	&__author {
+		font-weight: 600;
+		font-size: $font-tiny;
+		text-decoration: underline;
+	}
+
+	&__date {
+		font-size: $font-tiny;
+	}
+}

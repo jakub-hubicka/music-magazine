@@ -1,0 +1,51 @@
+.c-post-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	width: 100%;
+	max-width: 476px;
+	background: url("../img/image.png");
+	height: 278px;
+	background-position: center;
+	background-size: cover;
+	transition: 2s;
+	color: #fff;
+	margin-bottom: $large;
+	padding: 25px;
+
+	&:nth-child(2):hover {
+		filter: contrast(15);
+		transition: 2s;
+	}
+
+	&__tag {
+		display: inline-flex;
+		background: $color-main;
+		padding: 6px;
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		color: #fff;
+	}
+
+	&__title {
+		padding: 20px 0;
+		text-transform: none;
+		font-size: 2.3rem;
+		line-height: 2.7rem;
+	}
+
+	&__text {
+		font-size: 1.2rem;
+	}
+
+	&__author {
+		font-weight: 600;
+		font-size: $font-tiny;
+		text-decoration: underline;
+	}
+
+	&__date {
+		font-size: $font-tiny;
+	}
+}

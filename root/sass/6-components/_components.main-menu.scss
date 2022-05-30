@@ -1,0 +1,93 @@
+.c-main-menu {
+	padding: 31px 0;
+
+	&__list {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__item {
+		margin: 0 14px;
+		position: relative;
+
+		&:hover .c-submenu,
+		.c-submenu:hover {
+			top: 15px;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__arrow {		
+		background: url('../images/arrow-menu.png');
+		background-repeat: repeat;
+		background-size: 100%;
+		width: 13px;
+		height: 11px;
+		display: inline-block;
+		background-repeat: no-repeat;
+		margin-left: -6px;
+		position: relative;
+		z-index: 1;
+
+		&--large {
+			width: 17px;
+			height: 15px;
+			margin-left: -14px;
+		}
+
+		&--cube {
+			background: url('../images/arrow-menu--cube.png');
+		}
+	}
+
+	&__link {
+		padding: 10px;
+		color: $color-gray-dark;
+		letter-spacing: 1px;
+		line-height: 1.9rem;
+		transition: 1s;
+		font-weight: 500;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		position: relative;
+		color: #000;
+		transition: 1s;
+		z-index: 1;
+
+		&--active {
+			color: gold;
+			color: $color-main;
+		}		
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			width: 0%;
+			background: $color-main;
+			transition: 600ms;
+		}	
+
+		&:hover:after {		
+			width: 100%;
+			transition: 300ms;
+		}	
+	}
+}
+
+.darkmode .c-main-menu__link {
+	color: #fff;
+	transition: 1s;
+}
+
+.darkmode .c-main-menu__link:after {
+	background: $color-darkmode;
+}
+
+.darkmode .c-main-menu__arrow {
+	filter: hue-rotate(-111deg);
+}

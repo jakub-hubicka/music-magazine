@@ -1,0 +1,70 @@
+/* FULLWIDTH VERSION
+.c-submenu {
+	width: 100%;	
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	&__mask {
+		width: 100%;	
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: #fff;
+		transition: 1s;
+		z-index: 1;
+	}
+
+	&__body {
+		background: $color-main;
+		margin-top: 80px;
+		transform: translateY(-100%);
+		transition: .5s;
+		padding-top: 20px;
+
+		&--small {
+			margin-top: 40px;
+			transition: .5s;
+		}
+
+		&--open {
+			transform: translateY(0);
+			transition: 600ms;
+		}
+	}
+}
+
+.darkmode .c-submenu__mask {
+	background: #000;
+	transition: 1s;
+}
+*/
+
+.c-submenu {
+	position: absolute;
+	width: 175%;
+	padding: 50px 10px 10px 20px;
+	background: #fff;
+	transition: 300ms;
+	font-weight: 500;
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	top: 0;
+	left: -20px;
+	opacity: 0;
+	visibility: hidden;
+
+	&__link {
+		margin-bottom: $large;
+	}
+
+	&__link:last-child {
+		margin-bottom: 10px;
+	}
+}
+
+.darkmode .c-submenu {
+	background: #151515;
+}

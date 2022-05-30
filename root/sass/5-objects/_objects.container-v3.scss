@@ -1,0 +1,10 @@
+.o-container-v3 {
+	padding: 24px 24px 24px 64px;
+	margin-top: -78px;
+
+	@include media('mobile') {
+		padding: 20px;
+		width: 100%;
+		margin-top: 0;
+	}
+}

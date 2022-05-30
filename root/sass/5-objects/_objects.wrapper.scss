@@ -1,0 +1,26 @@
+.o-wrapper {
+	max-width: 1440px;
+	margin: 0 auto;	
+	overflow: hidden;
+
+	&--main {
+		margin-top: 80px;
+		
+		@include media('xl-1') {			
+			padding-top: 35px;
+			margin-top: 0;
+		}
+		@include media('mobile') {			
+			padding-top: 115px;
+			margin-top: 0;
+		}
+	}
+
+	&--overview {
+		padding-top: 24px;
+		
+		@include media('mobile') {			
+			padding-top: 120px;
+		}
+	}
+}

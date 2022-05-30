@@ -1,0 +1,22 @@
+.c-footer-info {
+	width: 300px;
+	margin-right: 100px;
+
+	@include media('mobile') {
+		margin: 0;
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 1.2rem;
+		font-weight: 300;
+		line-height: 1.9rem;
+		color: #fff;
+		width: 167px;
+		text-align: center;
+
+		@include media('mobile') {
+			margin: 0 auto 40px;
+		}
+	}
+}

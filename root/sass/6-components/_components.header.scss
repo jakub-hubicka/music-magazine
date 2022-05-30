@@ -1,0 +1,13 @@
+.c-header {
+	&--fixed {
+		position: fixed;
+		top: 0;
+	}
+	&--small {
+		height: 54px;
+
+		.c-main-menu {
+			padding: 13px 0;
+		}
+	}
+}

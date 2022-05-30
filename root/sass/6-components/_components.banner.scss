@@ -1,0 +1,28 @@
+.c-banner {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: $large;
+
+	&__item {		
+		border: 14px solid #EAEAF0;
+		background: #EAEAF0;
+		margin-bottom: 0px;
+		font-size: 0;
+		display: flex;
+		align-items: center;
+
+		&--dark {
+			border-color: #12161A;
+			background-color: #12161A;
+		}
+	}
+
+	@include media('xxl-2') {
+		display: none;
+	}
+}
+
+.darkmode .c-banner__item {
+	background: #232323;
+	border-color: #232323;
+}

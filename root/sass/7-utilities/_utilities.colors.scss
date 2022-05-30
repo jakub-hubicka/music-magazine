@@ -1,0 +1,19 @@
+.u-blue {
+	color: $color-main;
+}
+
+.u-white {
+	color: #fff;
+}
+
+.u-black {
+	color: #000;
+}
+
+.u-invert {
+	filter: invert(1);
+}
+
+.darkmode .u-blue {
+	color: $color-darkmode;
+}

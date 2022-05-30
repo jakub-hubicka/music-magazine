@@ -1,0 +1,35 @@
+.c-bottom-menu {
+	padding: 24px 0;
+
+	&__list {
+		display: flex;
+		justify-content: center;
+
+		@include media('mobile') {
+			display: block;
+			text-align: center;
+		}
+	}
+
+	&__item {
+		margin: 0 2px;
+	}
+
+	&__link {
+		padding: 8px 20px;
+		color: $color-gray-dark;
+		letter-spacing: 1px;
+		transition: 1s;
+		display: inline-block;
+
+		&--active {
+			color: gold;
+			color: $color-main;
+		}
+
+		&:hover {
+			color: $color-main;
+			transition: 0s;
+		}
+	}
+}

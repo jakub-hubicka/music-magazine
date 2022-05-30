@@ -1,0 +1,38 @@
+.c-event {
+	height: 394px;
+	max-width: 476px;
+	background: url("../img/event.png");
+	padding: 37px;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+
+	&__date {
+		font-size: 6.8rem;
+		font-weight: 700;
+		line-height: 6rem;
+	}
+
+	&__subtitle {
+		font-size: 2.8rem;		
+		margin-bottom: 6px;
+	}
+
+	&__info-container {
+		font-size: 1.4rem;
+		display: flex;
+	}
+
+	&__text {
+		font-size: 1.4rem;
+		line-height: 1;
+		font-weight: 300;
+		flex: 3;
+	}
+
+	&__link {
+		flex: 1;
+		align-self: center;
+	}
+}

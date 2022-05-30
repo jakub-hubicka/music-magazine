@@ -1,0 +1,52 @@
+.c-center-menu {
+	margin-top: 3px;
+
+	&__list {
+		display: flex;
+		justify-content: space-around;
+
+		&--normal {
+			justify-content: normal;
+			margin-left: -20px;
+		}
+	}
+
+	&__item {
+		margin-left: 20px;
+		padding: 6px;
+
+		&--active {
+			border-bottom: 2px solid $color-main;
+		}
+	}
+
+	&__link {
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		transition: 1s;
+		color: #EAEAF0;
+
+		&--colored {
+			color: $color-main;
+		}
+
+		&:hover {
+			color: $color-main;
+			transition: 0s;
+		}
+	}
+
+	@include media('xl-1') {
+		display: none;
+	}
+}
+
+
+.darkmode .c-center-menu__item--active {
+	border-bottom: 2px solid $color-darkmode;
+}
+
+.darkmode .c-center-menu__link--colored,
+.darkmode .c-center-menu__link:hover {
+	color: $color-darkmode;
+}

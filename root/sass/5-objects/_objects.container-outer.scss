@@ -1,0 +1,10 @@
+.o-container-outer {
+	max-width: 1216px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	&--wide {
+		max-width: 1352px;
+	}
+}

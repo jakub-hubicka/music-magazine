@@ -1,0 +1,42 @@
+.c-item-footer {
+	font-size: 1.2rem;
+	color: #fff;
+	font-weight: 400;
+
+	&__author {
+		text-decoration: underline;
+
+		id,
+		email {
+			display: none;
+		}
+	}
+
+	&__date {
+		font-weight: 700;
+		letter-spacing: 1px;
+	}
+
+	&__comments-count {
+		margin-left: 10px;
+		background: url('../images/comments-icon.png');
+		padding-left: 20px;
+		background-size: 17px;
+		background-repeat: no-repeat;
+
+		&--dark {
+			//filter: invert(1);
+			//color: #fff;
+			//background-size: 60%;
+			background: url('../images/comments-icon2.png');
+			padding-left: 17px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.darkmode .c-item-footer__comments-count--dark {
+	filter: invert(0);
+}

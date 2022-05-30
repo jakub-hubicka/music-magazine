@@ -1,0 +1,7 @@
+.o-container-v5 {
+	padding: 71px 0 0 24px;
+
+	@include media('mobile') {
+		padding: 0;
+	}
+}

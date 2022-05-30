@@ -1,0 +1,65 @@
+.c-article-slider {
+	max-width: 770px;
+	height: auto;
+	margin: 0 auto 29px;
+	position: relative;
+
+	@include media('mobile') {
+		display: none !important;
+	}
+
+	.slick-arrow {
+		width: 66px;
+		height: 63px;
+		background: $color-gray;
+		font-size: 0;	
+		font-family: "fontawesome";
+		cursor: pointer;
+		position: absolute;
+
+		&.slick-prev {
+			left: -86px;
+			top: calc(50% - 31px);
+
+			&:before {
+				content: "\f060";
+				font-size: 2rem;
+			}
+		}
+
+		&.slick-next {
+			right: -86px;
+			top: calc(50% - 31px);
+			
+			&:before {
+				content: "\f061";
+				font-size: 2rem;
+			}
+		}
+
+		&:hover {
+			background: $color-main;
+
+		}
+
+		&:hover:before {
+			color: #fff;
+		}
+	}
+
+	& .slick-track {
+		display: flex;
+		align-items: center;
+	}
+
+	& .itm {
+		display: flex;
+		justify-content: center;
+	}
+
+	& img {
+		display: block;
+		float: none !important;
+		margin: 0 auto !important;
+	}
+}

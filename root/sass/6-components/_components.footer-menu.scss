@@ -1,0 +1,30 @@
+.c-footer-menu {
+	width: 100%;
+
+	@include media('mobile') {
+		text-align: center;
+	}
+
+	&__title {
+		color: #fff;
+		font-size: 2.2rem;
+		font-weight: 600;
+		margin-bottom: 40px;
+		min-height: 2.6rem;
+	}
+
+	&__link {
+		color: #898989;
+		font-size: 1.6rem;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $color-main;
+		}
+	}
+}
+
+.darkmode .c-footer-menu__link:hover {
+	color: $color-darkmode;
+}

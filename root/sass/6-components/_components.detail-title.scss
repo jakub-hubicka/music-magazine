@@ -1,0 +1,60 @@
+.c-detail-title {
+	font-size: 16rem;
+	font-weight: 700;
+	//color: #F2F2F7; <- TOP
+	//color: #eaeaf0;
+	//color: #b3b2b2;
+	//color: #ddd;
+	color: #F2F2F7;	
+
+	@include media('mobile') {
+		font-size: 8rem;
+	}
+
+	&--small {
+		font-size: 5rem;
+		color: $color-main;
+
+		@include media('mobile') {
+			font-size: 7rem;
+		}
+	}
+
+	&--large {
+		font-size: 15.4rem;
+		color: #f2f2f7;
+		margin-left: -11px;
+
+		@include media('mobile') {
+			font-size: 6rem;
+			text-align: center;
+		}
+	}
+
+	&--v2 {
+		font-size: 5rem;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase;
+
+		@include media('mobile') {
+			text-align: center;
+		}
+	}
+
+	&--v3{
+		letter-spacing: 5.2rem;
+		font-size: 6rem;
+		font-weight: 900;
+		color: #000;
+		text-transform: uppercase;
+
+		@include media('mobile') {
+			text-align: center;
+		}
+	}
+}
+
+.darkmode .c-detail-title {
+	color: $color-darkmode;
+}

@@ -1,0 +1,45 @@
+.c-arrow {	
+	width: 42px;
+	height: 40px;
+	background: $color-gray;
+	font-size: 0;	
+	font-family: "fontawesome";
+	cursor: pointer;
+	text-align: center;
+    padding-top: 10px;
+    opacity: 0;
+    transition: 300ms;
+    opacity: 0;
+    bottom: -36px;
+    position: absolute;
+    text-decoration: none;
+    color: #000;
+
+    &--colored {
+    	background: $color-main;
+    	color: #fff;
+    }
+
+	&:before {
+		content: "\f061";
+		font-size: 1.6rem;
+	}
+
+	&:hover {
+		background: $color-main;
+	}
+
+	&:hover:before {
+		color: #fff;
+	}
+}
+
+
+.darkmode .c-arrow {
+	background-color: $color-darkmode;
+}
+
+.darkmode .c-arrow--colored {
+	background-color: $color-darkmode;
+	color: #fff;
+}

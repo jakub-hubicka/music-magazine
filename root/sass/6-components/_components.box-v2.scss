@@ -1,0 +1,155 @@
+.c-box-v2 {
+	position: relative;
+	width: 310px;
+	height: 440px;
+	margin-bottom: 40px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	overflow: hidden;
+	padding: 24px;
+
+	&--last {
+		background: $color-main;
+		justify-content: center;
+	}
+
+	@include media('m') {
+		width: 100%;
+	}
+
+	&--cube {
+		width: 440px;
+
+		@include media('xxl-3') {
+			width: 300px;
+		}
+	}
+
+	&__date {
+		font-weight: 900;
+		font-size: 6.8rem;
+		color: #EAEAF0;
+		margin-top: 18px;
+		line-height: .9;
+
+		&--multi {
+			font-size: 3.8rem;
+		}
+	}
+
+	&__title {
+		color: #EAEAF0;
+		font-weight: 400;
+		font-size: 2.4rem;
+		line-height: 2.9rem;
+		margin-bottom: 6px;
+		text-transform: uppercase;
+
+		&--large {
+			font-size: 3.4rem;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		@include media('mobile') {
+			font-size: 2rem;
+			line-height: 1.2;
+			width: 100%;
+		}
+	}
+
+	&__footer {
+		color: #fff;
+	}
+
+	&__content {
+		transition: 800ms;
+
+		&--last {
+			text-align: center;
+		}
+	}
+
+	&__plus-icon {
+		width: 150px;
+		margin-bottom: 50px;
+	}
+	
+	&__comments-count {
+		background: url('../images/comments-icon.png');
+		padding-left: 20px;
+		background-size: 17px;
+		font-size: 12px;
+		color: #fff;
+		background-repeat: no-repeat;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
+		background: linear-gradient(transparent, #000);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		height: 50px;
+		width: 50px;
+		bottom: -50px;
+		left: -50px;
+		box-shadow: 50px -50px 700px 300px $color-main;
+		background: $color-main;
+		opacity: 0;
+		transition: 800ms;
+	}
+	
+	@media (hover: hover) {
+		&:hover:after {
+			opacity: .6;
+			transition: 300ms;
+		}
+	}
+
+	@media (hover: hover) {
+		&:hover .c-box-v2__content:not(.c-box-v2__content--last) {
+			margin-bottom: 52px;
+			transition: 300ms;
+		}
+	}
+
+	.c-arrow {
+		bottom: -55px;
+	}
+
+	@media (hover: hover) {
+		&:hover .c-arrow {
+			opacity: 1;
+		}
+	}
+
+	& > * {
+		position: relative;
+		z-index: 1;
+	}
+
+	@include media('mobile') {
+		height: 275px;
+		margin-bottom: 20px;
+	}	
+}
+
+.darkmode .c-box-v2::after {
+	box-shadow: 50px -50px 700px 300px $color-darkmode-transparent;
+}
+
+.darkmode .c-box-v2--last {
+	background-color: $color-darkmode;
+}

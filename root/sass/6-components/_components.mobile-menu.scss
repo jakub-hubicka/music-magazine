@@ -1,0 +1,46 @@
+.c-mobile-menu {
+	position: fixed;
+	width: 100%;
+	height: calc(100vh - 95px);
+	background: #000;
+	left: -100vw;
+	top: 95px;
+	transition: 1s;
+	z-index: 666;
+	padding-top: 50px;
+
+	&__link {
+		color: #898989;
+		font-size: 2.2rem;
+		margin-bottom: 40px;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $color-main;
+		}
+
+		&--submenu {
+			margin-bottom: 20px;
+		}
+	}
+
+	&--opened {
+		left: 0;	
+		transition: 1s;
+	}
+
+	&__submenu {
+		height: 0;
+		overflow: hidden;
+		transition: 1s;
+
+		&--opened {
+			height: 330px;
+		}
+	}
+
+	@include media('mobile') {
+		display: block;
+	}
+}

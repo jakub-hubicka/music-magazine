@@ -1,0 +1,21 @@
+.c-text-filter {
+	margin-bottom: $large;
+
+	&__item {
+		margin-right: $small;
+		padding: 0;
+		color: #C6C6C6;
+		cursor: pointer;
+		transition: 200ms;
+
+		&--active,
+		&:hover {
+			color: $color-main;
+		}
+	}
+}
+
+.darkmode .c-text-filter__item--active,
+.darkmode .c-text-filter__item:hover {
+	color: $color-darkmode;
+}

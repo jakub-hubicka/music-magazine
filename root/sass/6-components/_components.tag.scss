@@ -1,0 +1,20 @@
+.c-tag {
+	background: rgba(0, 0, 255, 0.7);
+	padding: 1px 6px;
+	font-size: 1rem;
+	font-weight: 500;
+	height: 15px;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;;
+	color: #fff;
+	margin-right: $medium;
+	cursor: pointer;
+	border: 1px solid #0000FF;
+	white-space: nowrap;
+	line-height: 1.1;
+}
+
+.darkmode .c-tag {
+	background: $color-darkmode-transparent;
+	border-color: $color-darkmode;
+}

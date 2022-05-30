@@ -1,0 +1,53 @@
+.c-text {
+	font-size: 1.6rem;
+	line-height: 1.8;
+	text-align: justify;
+
+	&:after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+
+	& img {
+		/* float: none !important;
+		display: block;
+		margin: 24px auto !important; */
+		background-image: url(../images/x.png);
+		background-position: center;
+		background-size: cover;
+
+		@include media('mobile') {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	& > p {
+		margin-bottom: 29px;
+	}
+
+	a {
+		color: $color-main;
+		font-weight: 700;
+	}
+
+	& b {
+		font-weight: 700;
+		line-height: 1.3;
+		color: #000000;
+	}
+
+	& iframe {
+		width: 130%;
+		margin-bottom: $large;
+		margin-left: -15%;
+	}	
+}
+
+.darkmode .c-text a {
+	color: $color-darkmode;
+}
+.darkmode .c-text b {
+	color: #fff;
+}

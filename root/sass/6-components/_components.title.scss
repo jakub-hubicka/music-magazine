@@ -1,0 +1,39 @@
+.c-title {
+	font-size: 3.2rem;
+	font-weight: 600;
+	line-height: 3.8rem;
+	//color: #000;
+	//color: #b3b2b2;
+	//color: #444;
+	//color: #808080;
+	color: $color-main;
+	margin-bottom: $large;
+	padding-bottom: 5px;
+
+	&--gray {
+		color: #898989;
+	}
+
+	&--white {
+		color: #fff;
+		text-decoration: underline;
+	}
+
+	&--colored {
+		color: $color-main;
+		text-decoration: underline;	
+	}
+
+	&--compact {
+		margin-bottom: $medium;
+		padding: 0;
+	}
+}
+
+.darkmode .c-title {
+	color: $color-darkmode;
+}
+
+.darkmode .c-title--compact {
+	color: $color-darkmode;
+}

@@ -1,0 +1,27 @@
+.c-loader {	
+	position: relative;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: calc(50% - 38px);
+		top: calc(50% - 27px);
+		height: 54px;
+		width: 76px;
+		background: url("../images/load1234.png");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		animation: loading 1.5s infinite;
+		animation-timing-function: linear;
+		transform-origin: center;
+	}
+
+	@keyframes loading {
+		from {
+			transform: rotate(0);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}

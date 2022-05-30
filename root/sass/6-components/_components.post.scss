@@ -1,0 +1,67 @@
+.c-post {
+	width: 100%;
+	max-width: 376px;
+	margin-bottom: 40px;
+
+	&:hover &__image {
+		background-size: 100%;
+		transition: 2s;
+	}
+
+	&__image {
+		height: 222px;
+		position: relative;
+		background: url("../img/x.png");
+		background-size: 120%;
+		background-repeat: no-repeat;
+		background-position: center;
+		transition: 2s;
+	}
+
+	&__tag {
+		position: absolute;
+		left: 34px;
+		bottom: 30px;
+		background: $color-main;
+		padding: 6px;
+		font-size: 10px;
+		font-weight: 600;
+		letter-spacing: 1px;
+		color: #fff;
+	}
+
+	&__title {
+		padding: 24px;
+
+		&--light {
+			color: #fff;
+		}
+
+		@include media('mobile') {
+			padding: 16px;
+			font-size: 2rem;
+		}
+	}
+
+	&__text {
+		font-size: 1.2rem;
+	}
+
+	&__footer {
+		padding: 0 24px;
+
+		@include media('mobile') {
+			padding: 0 16px;
+		}
+	}
+
+	&__author {
+		font-weight: 600;
+		font-size: $font-tiny;
+		text-decoration: underline;
+	}
+
+	&__date {
+		font-size: $font-tiny;
+	}
+}

@@ -1,0 +1,31 @@
+.u-bg-dark {
+	background: linear-gradient(145deg, #191e24 12%,#060606 80%);
+	background-repeat: no-repeat;
+}
+
+.u-bg-logo {
+	background: url("../images/bg-logo.png");
+	background-size: contain;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.u-bg-gray {
+	background-color: #EAEAF0;
+}
+
+.u-bg-main {
+	background-color: #fff;
+}
+
+.darkmode .u-bg-main,
+.darkmode .u-bg-gray {
+	background-color: #111;
+}
+
+.darkmode .u-bg-logo {
+	background: url("../images/bg-logo-darkmode.png");
+	background-size: contain;
+	background-position: right;
+	background-repeat: no-repeat;
+}

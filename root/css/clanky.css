@@ -1,0 +1,6 @@
+.c-main-menu__item:nth-child(2) {
+	pointer-events: none;
+}
+.c-main-menu__item:nth-child(2) > span {
+	display: none;
+}

@@ -1,0 +1,22 @@
+<div class="o-container-flex o-container-flex--end u-pb">
+	<div class="c-detail-title c-detail-title--small">Akce</div>
+	<nav class="c-center-menu u-pb-s">
+		<ul class="c-center-menu__list">
+			<li class="c-center-menu__item"><a href="pridat-akci" class="c-center-menu__link">Přidat akci</a></li>
+		</ul>
+	</nav>
+</div>	
+<div class="c-slider-multiple">
+	<div class="c-slider-multiple__container">
+		<?php $Event->showEventsList();?>
+	</div>
+	<div class="c-slider-multiple__controls">
+		<button class="c-slider-multiple__arrow c-slider-multiple__arrow--left"></button>
+		<button class="c-slider-multiple__arrow c-slider-multiple__arrow--right"></button>
+		<div class="c-slider-multiple__bar-container">
+			<div class="c-slider-multiple__bar">
+				<div class="c-slider-multiple__bar--active"></div>
+			</div>
+		</div>
+	</div>
+</div>

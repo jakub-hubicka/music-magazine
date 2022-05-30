@@ -1,0 +1,23 @@
+<div class="u-bg-dark u-pt-large">
+	<div class="o-container-outer o-container-outer--wide">
+		<div class="o-container-flex">
+			<div class="c-title c-title--gray">
+				<span class="c-title--white">Akce</span> a eventy
+			</div>
+			<nav class="c-center-menu">
+				<ul class="c-center-menu__list">
+					<li class="c-center-menu__item  c-center-menu__item--active"><a class="c-center-menu__link">všechny</a></li>
+					<li class="c-center-menu__item"><a class="c-center-menu__link">koncerty</a></li>
+					<li class="c-center-menu__item"><a class="c-center-menu__link">akce</a></li>
+					<li class="c-center-menu__item"><a class="c-center-menu__link">fesťáky</a></li>
+				</ul>
+			</nav>
+		</div>	
+		<div class="c-slider-multiple">
+			<div class="c-slider-multiple__container">
+				<?php $Event->showEventsList();?>
+			</div>
+			<div class="c-slider-multiple__controls"></div>
+		</div>
+	</div>
+</div>

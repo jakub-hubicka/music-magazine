@@ -1,0 +1,53 @@
+<header>
+	<div class="o-container-center u-z-index">
+		<div class="c-logo">
+			<a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/marast" class="c-logo__link c-logo__link--day" href="#"></a>
+			<a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/marast" class="c-logo__link c-logo__link--night" href="#"></a>
+		</div>
+		<nav class="c-main-menu">
+			<ul class="c-main-menu__list">
+				<li class="c-main-menu__item"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/novinky" class="c-main-menu__link">Novinky</a></li>
+				<li class="c-main-menu__item">
+					<a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/clanky" class="c-main-menu__link">Články</a><span class="c-main-menu__arrow"></span>
+					<ul class="c-submenu">
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/clanky?kategorie=recenze" class="c-main-menu__link">Recenze</a></li>
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/clanky?kategorie=reporty" class="c-main-menu__link">Reporty</a></li>
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/clanky?kategorie=rozhovory" class="c-main-menu__link">Rozhovory</a></li>
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/clanky?kategorie=alba" class="c-main-menu__link">Alba měsíce</a></li>
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/clanky?kategorie=ostatni" class="c-main-menu__link">Ostatní</a></li>
+					</ul>
+				</li>
+				<li class="c-main-menu__item"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/galerie" class="c-main-menu__link">Galerie</a></li>
+				<li class="c-main-menu__item"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/akce" class="c-main-menu__link">Akce</a></li>
+				<li class="c-main-menu__item">
+					<a class="c-main-menu__link u-c-default">Podporujeme</a><span class="c-main-menu__arrow"></span>
+					<ul class="c-submenu">
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/tagy/brutal_assault" class="c-main-menu__link">Brutal Assault</a></li>
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/tagy/obscure_promotion" class="c-main-menu__link">Obscure Promotion</a></li>
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/tagy/obscene_extreme" class="c-main-menu__link">Obscene Extreme</a></li>
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/tagy/death_fest" class="c-main-menu__link">MG CZ Death fest</a></li>
+						<li class="c-submenu__link"><a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/tagy/kafefest" class="c-main-menu__link">Kafest</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>		
+	</div>
+	<!-- old version fullwidth submenu (components.submenu.scss)
+		<div class="c-submenu">
+			<div class="c-submenu__mask"></div>
+			<div class="c-submenu__body"></div>
+		</div>
+	-->
+</header>
+
+<div class="c-mobile-header">
+	<div class="c-logo c-logo--mobile">
+			<a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/marast" class="c-logo__link c-logo__link--mobile c-logo__link--day" href="#"></a>
+			<a href="https://<?php echo $_SERVER['HTTP_HOST'] ?>/marast" class="c-logo__link c-logo__link--mobile c-logo__link--night" href="#"></a>
+		</div>
+	<button id="menuButton" class="c-mobile-header__hamburger">
+		<div></div>
+		<div></div>
+		<div></div>
+	</button>
+</div>

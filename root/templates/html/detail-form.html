@@ -1,0 +1,20 @@
+<div class="c-detail-form__separator"></div>
+<div class="c-detail-form">
+	<div class="c-detail-form__image"></div>
+	<div class="c-detail-form__container">
+		<h3 class="c-detail-form__title">Vložit komentář</h3>
+		<form>
+			<div class="c-detail-form__input-group">
+				<input id="name" class="c-detail-form__input" type="text" placeholder="Jméno">
+			</div>
+			<div class="c-detail-form__input-group">
+				<textarea id="text" rows="1" class="c-detail-form__input" placeholder="Zpráva"></textarea>
+			</div>
+			<input id="contentObjectId" type="hidden" value="<?php echo $Detail->getContentObjectId() ?>">
+			<input id="urlPath" type="hidden" value="<?php echo $fullPath ?>">
+			<input id="title" type="hidden" value="<?php echo $Detail->getTitle() ?>">
+			<input id="type" type="hidden" value="<?php echo $Detail->getType() ?>">
+			<input id="detailFormSubmit" class="c-detail-form__button" type="submit" value="Potvrdit">
+		</form>
+	</div>
+</div>

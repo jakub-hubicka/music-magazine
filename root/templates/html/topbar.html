@@ -1,0 +1,18 @@
+<div class="c-topbar">		
+	<div class="c-topbar__container">
+		<img class="c-topbar__day" src="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/images/day.png">
+		<img class="c-topbar__night" src="https://<?php echo $_SERVER['HTTP_HOST'] ?>/root/images/night.png">
+		<button class="c-topbar__toggle <?php if (isset($_SESSION['darkmode']) && $_SESSION['darkmode'] == 'darkmode'){echo 'c-topbar__toggle--active';}?>">
+			<div class="c-topbar__toggle-border">
+				<div class="c-topbar__toggle-dot"></div>
+			</div>
+		</button>
+		<ul class="c-topbar__list">
+			<li class="c-topbar__item"><a href="https://www.facebook.com/test" class="c-topbar__link">FACEBOOK</a><a class="c-topbar__logo-link"><i class="fab fa-facebook"></i></a></li>
+			<li class="c-topbar__item"><a href="https://www.instagram.com/test" class="c-topbar__link">INSTAGRAM</a><a class="c-topbar__logo-link"><i class="fab fa-instagram"></i></a></li>
+			<li class="c-topbar__item"><a href="https://twitter.com/testcom" class="c-topbar__link">TWITTER</a><a class="c-topbar__logo-link"><i class="fab fa-twitter"></i></a></li>				
+			<li class="c-topbar__item"><a href="https://open.spotify.com/user/8npnj62upz0scuwibtuohsdrw" class="c-topbar__link">SPOTIFY</a><a class="c-topbar__logo-link"><i class="fab fa-spotify"></i></a></li>
+		</ul>
+		<div class="c-topbar__search"></div>
+	</div>
+</div>
